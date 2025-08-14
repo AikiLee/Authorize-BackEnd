@@ -54,9 +54,9 @@ sequelize
     .sync({ force: false }) // 设置为 true 将会删除并重建表，生产环境请设为 false
     .then(() => {
         console.log("数据库同步成功");
-        // app.listen(PORT, () => {
-        //     console.log(`服务器运行在端口 ${PORT}`);
-        // });
+        app.listen(PORT, () => {
+            console.log(`服务器运行在端口 ${PORT}`);
+        });
     })
     .catch((err) => {
         console.error("数据库同步失败:", err);
